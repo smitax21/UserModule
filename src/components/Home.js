@@ -18,7 +18,7 @@ import {
 } from "react-native";
 import MapViewDirections from "react-native-maps-directions";
 export default function Home({ navigation }) {
-  // console.log("loc:",loc)
+  console.log("loc:", loc);
   console.log("destination:", destination);
   const { data, data1 } = useApi(
     "https://data.bus-data.dft.gov.uk/api/v1/dataset/2100/?api_key=b83aefcb293a2b59bc782f70c6c365cf17b2f154"
@@ -89,10 +89,10 @@ export default function Home({ navigation }) {
               <TouchableOpacity
                 style={{}}
                 onPress={() => {
-                  // global.loc = item;
+                  global.loc = item;
                   setSelectedValue(item);
                   setFilteredData([]);
-                  // console.log(loc);
+                  console.log(loc);
                 }}
               >
                 <Text style={{ fontSize: 20, margin: 10 }}>{item}</Text>
